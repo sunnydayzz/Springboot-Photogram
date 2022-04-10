@@ -18,7 +18,7 @@ public class AuthController {
 	
 	private static final Logger log = LoggerFactory.getLogger(AuthController.class);
 	
-	private final AuthService authService;
+	private final AuthService authService; // di
 
 	// 생성자로 DI
 //	public AuthController(AuthService authService) {
