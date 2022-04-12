@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 
+import org.eclipse.jdt.internal.compiler.ast.FalseLiteral;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,14 +28,18 @@ public class User {
 	
 	private Long id;
 	
-	@Column(unique = true)
+	@Column(length = 20, unique = true)
 	private String username;
 	
+	@Column(nullable = false)
 	private String password;
 	
+	@Column(nullable = false)
 	private String name;
 	private String website;
 	private String bio;
+	
+	@Column(nullable = false)
 	private String email;
 	private String phone;
 	private String gender;;
