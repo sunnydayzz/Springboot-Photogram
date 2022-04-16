@@ -27,7 +27,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		.antMatchers("/", "/user/**", "/image/***", "/subscribe/**", "/comment/**").authenticated()
 		.and()
 		.formLogin()
-		.loginPage("/auth/signin")
+		.loginPage("/auth/signin") // get 요청 처리
+		.loginProcessingUrl("/auth/signin") // post 요청 처리
 		.defaultSuccessUrl("/");
 	}
 }
